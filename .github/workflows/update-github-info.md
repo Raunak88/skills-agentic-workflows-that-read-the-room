@@ -1,6 +1,6 @@
 ---
 name: update-github-info
-description: Keep the GitHub Info website current with practical, source-attributed updates from the GitHub Blog and Changelog.
+description: Keep the GitHub Info website current with practical, source-attributed updates from the GitHub Blog, Changelog, and Awesome Copilot workflows.
 on:
   schedule:
     - cron: "0 9 * * *"
@@ -14,6 +14,7 @@ network:
   allowed:
     - github.blog
     - github.com
+    - awesome-copilot.github.com
 safe-outputs:
   create-pull-request:
     max: 1
@@ -29,8 +30,9 @@ Update the GitHub Info website for Mona's review.
 1. Read `notes/mona-notes.md`.
 2. Use web-fetch to read `https://github.blog/latest/`.
 3. Use web-fetch to read `https://github.blog/changelog/`.
-4. Use the GitHub repository API tools for all repository guidance and reference-file reads. Do not use terminal, CLI, or sandboxed commands for GitHub API reads.
-5. Read the current `site/content/github-info.md` before editing it.
+4. Use web-fetch to read `https://awesome-copilot.github.com/workflows/`.
+5. Use the GitHub repository API tools for all repository guidance and reference-file reads. Do not use terminal, CLI, or sandboxed commands for GitHub API reads.
+6. Read the current `site/content/github-info.md` before editing it.
 
 ## Update rules
 
