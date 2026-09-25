@@ -13,6 +13,7 @@ tools:
   edit:
 network:
   allowed:
+    - github
     - github.blog
     - github.com
     - awesome-copilot.github.com
